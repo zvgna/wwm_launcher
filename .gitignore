@@ -1,0 +1,44 @@
+# =========================
+# Python / virtualenv
+# =========================
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# =========================
+# Build / packaging
+# =========================
+build/
+dist/
+*.spec
+
+# =========================
+# Logs / temp
+# =========================
+*.log
+*.tmp
+*.bak
+
+# =========================
+# OS junk
+# =========================
+.DS_Store
+Thumbs.db
+
+# =========================
+# VS Code
+# =========================
+.vscode/
+
+# =========================
+# LOCAL RELEASE STAGING
+# (files for manual upload to GitHub Releases)
+# =========================
+releases/
+
+# =========================
+# User config (paths to game, etc.)
+# =========================
+config.json
