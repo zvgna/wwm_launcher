@@ -1,0 +1,126 @@
+QWidget {
+  font-family: "Segoe UI";
+  color: rgba(255,255,255,0.92);
+  font-size: 14px;
+}
+
+#Shell {
+  background: rgba(255,255,255,0.10);
+  border: 1px solid rgba(255,255,255,0.18);
+  border-radius: 18px;
+}
+
+#Title { font-size: 30px; font-weight: 900; }
+#Sub { color: rgba(255,255,255,0.78); }
+
+#WinBtn, #WinBtnClose {
+  min-width: 38px;
+  min-height: 34px;
+  border-radius: 10px;
+  background: rgba(255,255,255,0.10);
+  border: 1px solid rgba(255,255,255,0.12);
+  font-weight: 900;
+}
+#WinBtnClose:hover {
+  background: rgba(255, 80, 80, 0.35);
+  border: 1px solid rgba(255, 120, 120, 0.45);
+}
+
+#Segment {
+  background: rgba(0,0,0,0.20);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 18px;
+}
+#SegBtn {
+  border-radius: 14px;
+  padding: 10px 14px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.0);
+  font-weight: 700;
+}
+#SegBtn:checked {
+  background: rgba(255,255,255,0.88);
+  color: rgba(20,20,24,0.95);
+}
+
+#Card {
+  background: rgba(0,0,0,0.18);
+  border: 1px solid rgba(255,255,255,0.14);
+  border-radius: 16px;
+}
+#CardTitle { font-weight: 900; font-size: 16px; }
+
+#Input {
+  background: rgba(0,0,0,0.18);
+  border: 1px solid rgba(255,255,255,0.14);
+  border-radius: 12px;
+  padding: 8px 10px;
+}
+
+#GhostBtn {
+  background: rgba(255,255,255,0.10);
+  border: 1px solid rgba(255,255,255,0.16);
+  border-radius: 12px;
+  padding: 8px 12px;
+  font-weight: 800;
+}
+#GhostBtn:hover { background: rgba(255,255,255,0.16); }
+
+#PrimaryBtn {
+  background: qlineargradient(x1:0,y1:0,x2:1,y2:0,
+    stop:0 rgba(130, 70, 255, 0.70),
+    stop:1 rgba(60, 120, 255, 0.70)
+  );
+  border: 1px solid rgba(255,255,255,0.18);
+  border-radius: 14px;
+  padding: 12px 16px;
+  font-weight: 900;
+}
+#PrimaryBtn:disabled {
+  background: rgba(255,255,255,0.10);
+  color: rgba(255,255,255,0.35);
+}
+
+#InfoBox {
+  background: rgba(60, 120, 255, 0.18);
+  border: 1px solid rgba(120, 180, 255, 0.18);
+  border-radius: 14px;
+}
+#InfoIcon {
+  min-width: 22px;
+  min-height: 22px;
+  border-radius: 11px;
+  background: rgba(255,255,255,0.18);
+  qproperty-alignment: AlignCenter;
+  font-weight: 900;
+}
+#InfoTitle { font-weight: 900; }
+#InfoText { color: rgba(255,255,255,0.86); }
+#InfoText2 { color: rgba(255,255,255,0.82); }
+
+#RowTitle { font-weight: 900; }
+#RowSub { color: rgba(255,255,255,0.72); }
+
+#Divider {
+  background: rgba(255,255,255,0.12);
+  max-height: 1px;
+}
+
+#StatusText {
+  color: rgba(255,255,255,0.80);
+  padding-top: 6px;
+}
+
+#Switch::indicator {
+  width: 44px;
+  height: 24px;
+  border-radius: 12px;
+}
+#Switch::indicator:unchecked {
+  background: rgba(255,255,255,0.18);
+  border: 1px solid rgba(255,255,255,0.16);
+}
+#Switch::indicator:checked {
+  background: rgba(120, 200, 255, 0.55);
+  border: 1px solid rgba(120, 200, 255, 0.40);
+}

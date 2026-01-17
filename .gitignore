@@ -1,44 +1,27 @@
-# =========================
-# Python / virtualenv
-# =========================
-.venv/
+# --- Python ---
 __pycache__/
-*.pyc
+*.py[cod]
 *.pyo
 *.pyd
 
-# =========================
-# Build / packaging
-# =========================
+# --- Virtual env ---
+.venv/
+venv/
+
+# --- PyInstaller ---
 build/
 dist/
 *.spec
 
-# =========================
-# Logs / temp
-# =========================
-*.log
-*.tmp
-*.bak
+# --- User data (runtime) ---
+WWMRU/
+config.json
 
-# =========================
-# OS junk
-# =========================
+# --- OS / IDE ---
 .DS_Store
 Thumbs.db
-
-# =========================
-# VS Code
-# =========================
 .vscode/
+.idea/
 
-# =========================
-# LOCAL RELEASE STAGING
-# (files for manual upload to GitHub Releases)
-# =========================
-releases/
-
-# =========================
-# User config (paths to game, etc.)
-# =========================
-config.json
+# --- Logs ---
+*.log

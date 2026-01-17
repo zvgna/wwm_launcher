@@ -1,26 +1,49 @@
 import json
+import sys
 from pathlib import Path
 
-ROOT_DIR = Path(__file__).resolve().parent.parent
-CONFIG_PATH = ROOT_DIR / "config.json"
+APP_FOLDER_NAME = "WWMRU"
+
+
+def _base_dir() -> Path:
+    if getattr(sys, "frozen", False):
+        return Path(sys.executable).resolve().parent
+    return Path(__file__).resolve().parent.parent
+
+
+def get_app_dir() -> Path:
+    d = _base_dir() / APP_FOLDER_NAME
+    d.mkdir(parents=True, exist_ok=True)
+    return d
+
+
+CONFIG_PATH = get_app_dir() / "config.json"
 
 
 def load_config() -> dict:
     if CONFIG_PATH.exists():
         try:
-            return json.loads(CONFIG_PATH.read_text(encoding="utf-8"))
+            cfg = json.loads(CONFIG_PATH.read_text(encoding="utf-8"))
+            cfg.setdefault("game_root", "")
+            cfg.setdefault("installed_version", "—")
+            cfg.setdefault("backup_enabled", True)
+            cfg.setdefault("backup_done", False)
+            cfg.setdefault("recent_versions", [])
+            return cfg
         except Exception:
             pass
 
     return {
         "game_root": "",
-        "github_owner": "YOUR_OWNER",
-        "github_repo": "wwm_localization"
+        "installed_version": "—",
+        "backup_enabled": True,
+        "backup_done": False,
+        "recent_versions": [],
     }
 
 
 def save_config(cfg: dict) -> None:
     CONFIG_PATH.write_text(
         json.dumps(cfg, ensure_ascii=False, indent=2),
-        encoding="utf-8"
+        encoding="utf-8",
     )
